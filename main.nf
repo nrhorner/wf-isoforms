@@ -462,6 +462,10 @@ workflow pipeline {
 WorkflowMain.initialise(workflow, params, log)
 workflow {
 
+    throw new Exception(
+        "This workflow has now been deprecated. Please use the transcriptomics workflow " +
+        "here: https://github.com/epi2me-labs/wf-transcriptomes "
+    )
     start_ping()
 
     fastq = file(params.fastq, type: "file")
